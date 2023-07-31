@@ -1,4 +1,5 @@
 #include "window.hpp"
+#include "mesh.hpp"
 
 int main() {
     Window w;

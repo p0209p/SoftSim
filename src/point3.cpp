@@ -5,6 +5,6 @@ float dot(Point3 a, Point3 b) {
 }
 
 Point3 cross(Point3 a, Point3 b) {
-    Point3 c((a.y*b.z - a.z*b.y), (a.x*b.z - a.z*c.x), (a.x*b.y - a.y*b.x));
+    Point3 c((a.y*b.z - a.z*b.y), (a.x*b.z - a.z*b.x), (a.x*b.y - a.y*b.x));
     return c;
 }
