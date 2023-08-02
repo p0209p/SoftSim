@@ -5,11 +5,11 @@ Mesh::Mesh(std::vector<float> pts, std::vector<std::size_t> conn) {
     triangles = conn;
 }
 
+// Generate Mesh object using a given mesh file
 Mesh::Mesh(std::string filename) {
     Assimp::Importer importer;
 
-    const aiScene* scene = importer.ReadFile(filename,
-                                             aiProcess_Triangulate | aiProcess_JoinIdenticalVertices | aiProcess_GenNormals);
+    const aiScene* scene = importer.ReadFile(filename,aiProcess_Triangulate | aiProcess_JoinIdenticalVertices | aiProcess_GenNormals);
 
     if (!scene || scene->mFlags & AI_SCENE_FLAGS_INCOMPLETE || !scene->mRootNode) {
         std::cout << "Error loading mesh: " << importer.GetErrorString() << "\n";

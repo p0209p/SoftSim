@@ -17,6 +17,8 @@ class Point3 {
         Point3 operator -(Point3 a) {Point3 c(a.x-x,a.y-y,a.z-z); return c;}
         Point3 operator *(Point3 a) {Point3 c(a.x*x,a.y*y,a.z*z); return c;}
         Point3 operator /(Point3 a) {Point3 c(x/a.x,y/a.y,z/a.z); return c;}
+        
+        void normalize() {float mag = magnitude(); x /= mag; y /= mag; z /= mag;};
         inline float magnitude() {return pow(x*x + y*y + z*z, 0.5);}
         inline float sqmagnitude() {return x*x + y*y + z*z;}
 
@@ -25,6 +27,8 @@ class Point3 {
         Point3  operator -=(float s) {x-=s; y-=s; z-=s; return *this;}
         Point3  operator /=(float s) {x/=s; y/=s; z/=s; return *this;}
 };
+
+typedef Point3 Vector3;
 
 float dot(Point3 a, Point3 b);
 Point3 cross(Point3 a, Point3 b);

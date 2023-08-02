@@ -11,9 +11,8 @@ class Window {
         int height;
         int width;
         Window();
-        void init_window(int w, int h);
-        void run_window();
+        void init_window();
         void close_window();
 };
 
-#endif
+#endif 
